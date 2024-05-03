@@ -39,7 +39,9 @@ function MessageCard({ message, onMessageDelete }: MessageCardProps) {
     <Card className="card-bordered">
       <CardHeader>
         <div className="flex justify-between items-center">
-          <CardTitle>{message.content}</CardTitle>
+          <CardTitle className="text-sm overflow-auto">
+            {message.content}
+          </CardTitle>
           <AlertDialog>
             <AlertDialogTrigger asChild>
               <Button variant="destructive">
